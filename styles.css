@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    overflow: hidden; /* Zapobiega przewijaniu strony */
+    position: relative; /* Ustawienie pozycji dla efektu śniegu */
+}
+
+header {
+    background-color: #336699;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    position: relative; /* Ustawienie pozycji dla kontenera */
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.counter {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Dodanie efektu śniegu */
+.snowflake {
+    position: absolute;
+    background-image: url('snowflake.png'); /* Adres obrazka śniegu */
+    width: 15px;
+    height: 15px;
+    pointer-events: none;
+    animation: snow-fall linear infinite;
+    top: -15px; /* Początkowa pozycja górnego marginesu dla śniegu */
+}
+
+@keyframes snow-fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh); /* Końcowa pozycja dolnego marginesu dla śniegu */
+    }
+}
